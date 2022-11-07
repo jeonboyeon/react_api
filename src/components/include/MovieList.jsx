@@ -9,7 +9,8 @@ function MovieItem(props) {
                 <img src={`https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`} alt={props.movie.title} />
                 <em>
                     <span className="title">{props.movie.title}</span>
-                    <span className="star">{props.movie.vote_average}</span>
+                    <span className="star">{props.movie.vote_average} vote</span>
+                    <span className="rank">{}</span>
                 </em>
             </a>
         </li>
@@ -20,7 +21,7 @@ const MovieList = (props) => {
     return (
         <div className="movie__list">
             <div className="container">
-                <h3>인기 영화 순위</h3>
+                <h3>a popular movie</h3>
                 <div className="movieList__inner">
                     <ul>
                         {props.movies.map((movies, index) => (
