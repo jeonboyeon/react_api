@@ -16,11 +16,12 @@ function MovieItem(props) {
     );
 }
 
-const MovieCont = (props) => {
+const MovieList = (props) => {
     return (
-        <section className="cont__movie">
+        <div className="movie__list">
             <div className="container">
-                <div className="movie__inner">
+                <h3>인기 영화 순위</h3>
+                <div className="movieList__inner">
                     <ul>
                         {props.movies.map((movies, index) => (
                             <MovieItem key={index} movie={movies} />
@@ -28,8 +29,8 @@ const MovieCont = (props) => {
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
-export default MovieCont;
+export default MovieList;
