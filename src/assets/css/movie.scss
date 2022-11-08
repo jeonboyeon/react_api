@@ -129,96 +129,70 @@
     }
 }
 
-// movie__list
 .movie__list {
-    margin-bottom: 100px;
     h3 {
-        padding-bottom: 20px;
-        font-size: 30px;
         font-family: var(--font-sub1);
+        font-size: 1.6vw;
         color: var(--white);
-        border-bottom: 1px solid var(--bg-dark-border);
-        text-shadow: 2px 2px 2px #000;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--bg-dark-border);
     }
-    .movieList__inner {
-        overflow: hidden;
-        ul {
-            margin-top: 10px;
-            height: 450px;
-            overflow-x: scroll;
+}
+
+.card {
+    width: 200px;
+    height: 380px;
+    margin-bottom: 30px;
+    a {
+        position: relative;
+
+        &:hover img {
+            
+        }
+        img {
+            border-radius: 10px;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        em {
             display: flex;
-            flex-wrap: nowrap;
-
-            &::-webkit-scrollbar {
-                height: 8px;
+            flex-wrap: wrap;
+            color: var(--white);
+            .title {
+                font-family: var(--font-kr);
+                font-size: 15px;
+                padding: 5px 15px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                border-bottom-left-radius: 20px;
+                border-top-right-radius: 20px;
             }
-            &::-webkit-scrollbar-thumb {
-                width: 10%;
-                border-radius: 50px;
-                background-color: rgba(255, 255, 255, 0.5);
+            .star {
+                font-family: var(--font-kr);
+                font-size: 14px;
+                position: absolute;
+                top: 0;
+                right: 0px;
+                width: 50px;
+                padding: 5px 10px;
+                border-bottom-left-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(10px);
             }
-            &::-webkit-scrollbar-track {
-                border-radius: 50px;
-                background-color: #364c59;
-            }
-            li {
-                position: relative;
-                margin: 20px;
-                width: 200px;
-                display: inline-block;
-
-                .num {
-                    color: var(--white);
-                }
-                a {
-                    width: 200px;
-                    img {
-                        object-position: center;
-                        object-fit: cover;
-                        width: 200px;
-                        height: 300px;
-                        margin-bottom: 10px;
-                        transition: transform 0.3s;
-                    }
-                    em {
-                        display: flex;
-                        flex-wrap: wrap;
-                        .title {
-                            font-family: var(--font-kr);
-                            width: 100%;
-                            text-align: center;
-                            color: var(--white);
-                            margin-bottom: 10px;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                        }
-                        .star {
-                            text-align: center;
-                            width: 100%;
-                            font-family: var(--font-kr);
-                            display: block;
-                            border-radius: 5px;
-                            text-align: center;
-                            color: rgb(255, 255, 255);
-                            background-color: rgba(10, 41, 52, 0.5);
-                            backdrop-filter: blur(5px);
-                            padding: 10px 20px;
-                        }
-                        .rank {
-                            position: absolute;
-                            top: -15px;
-                            left: -15px;
-                            font-size: 2.5vw;
-                            color: #dcdcdc;
-                        }
-                    }
-                }
-
-                &:hover img {
-                    transform: scale(1.05) skewY(-2deg);
-                    box-shadow: 0 0 10px rgb(18, 18, 18);
-                }
+            .rank {
+                position: absolute;
+                top: 0;
+                width: 40px;
+                height: 40px;
+                left: -100px;
+                line-height: 40px;
+                border-bottom-right-radius: 50%;
+                background-color: rgba(255, 132, 45, 0.5);
+                backdrop-filter: blur(10px);
             }
         }
     }

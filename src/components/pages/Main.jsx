@@ -5,6 +5,7 @@ import Contents from "../layout/Contents";
 import Footer from "../layout/Footer";
 import MainCont from "../include/MainCont";
 
+
 const Main = () => {
     return (
         <>
