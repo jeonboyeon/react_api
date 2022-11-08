@@ -69,6 +69,7 @@
                         backdrop-filter: blur(5px);
                         border: 5px solid #121b1f;
                         text-align: center;
+                        overflow: hidden;
                     }
                 }
             }
@@ -137,10 +138,12 @@
         font-family: var(--font-sub1);
         color: var(--white);
         border-bottom: 1px solid var(--bg-dark-border);
+        text-shadow: 2px 2px 2px #000;
     }
     .movieList__inner {
         overflow: hidden;
         ul {
+            margin-top: 10px;
             height: 450px;
             overflow-x: scroll;
             display: flex;
@@ -163,6 +166,7 @@
                 margin: 20px;
                 width: 200px;
                 display: inline-block;
+
                 .num {
                     color: var(--white);
                 }
@@ -173,7 +177,8 @@
                         object-fit: cover;
                         width: 200px;
                         height: 300px;
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
+                        transition: transform 0.3s;
                     }
                     em {
                         display: flex;
@@ -196,11 +201,23 @@
                             border-radius: 5px;
                             text-align: center;
                             color: rgb(255, 255, 255);
-                            background-color: rgba(11, 61, 77, 0.5);
+                            background-color: rgba(10, 41, 52, 0.5);
                             backdrop-filter: blur(5px);
                             padding: 10px 20px;
                         }
+                        .rank {
+                            position: absolute;
+                            top: -15px;
+                            left: -15px;
+                            font-size: 2.5vw;
+                            color: #dcdcdc;
+                        }
                     }
+                }
+
+                &:hover img {
+                    transform: scale(1.05) skewY(-2deg);
+                    box-shadow: 0 0 10px rgb(18, 18, 18);
                 }
             }
         }

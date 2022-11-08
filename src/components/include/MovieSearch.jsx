@@ -28,7 +28,7 @@ const MovieSearch = ({ onSearch }) => {
     return (
         <div className="movie__search">
             <div className="container">
-                <input ref={inputRef} type="search" placeholder="검색하기" onKeyPress={onKeyPress} />
+                <input ref={inputRef} type="search" placeholder="영화 제목 검색하기" onKeyPress={onKeyPress} />
                 <button type="submit" onClick={onClick}>
                     검색
                 </button>
@@ -38,3 +38,5 @@ const MovieSearch = ({ onSearch }) => {
 };
 
 export default MovieSearch;
+
+

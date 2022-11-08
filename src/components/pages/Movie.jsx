@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState, useEffect, secEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "../layout/Header";
 import Contents from "../layout/Contents";
 import Footer from "../layout/Footer";
@@ -30,7 +30,9 @@ const Movie = () => {
     }, []);
 
     useEffect(() => {
-        fetch("https://api.themoviedb.org/3/movie/popular?api_key=5edfaf2cd56ea579475475637230644d&language=en-US&page=1")
+        fetch(
+            "https://api.themoviedb.org/3/movie/popular?api_key=5edfaf2cd56ea579475475637230644d&language=en-US&page=1"
+        )
             .then((response) => response.json())
             // .then((result) => console.log(result.results))
             .then((result) => listMovies(result.results))
