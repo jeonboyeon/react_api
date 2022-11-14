@@ -1,0 +1,41 @@
+.cont__unsplash {
+    ul {
+        column-count: 4;
+        column-gap: 20px;
+        width: 100%;
+
+        li {
+            margin-bottom: 20px;
+
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.unsplash__list {
+    h3 {
+        text-align: center;
+        background-color: var(--bg-dark-border);
+        font-size: 30px;
+        color: var(--white);
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .unsplashList__inner {
+        height: 300px;
+        margin-bottom: 50px;
+        li {
+            margin-bottom: 50px;
+            a {
+                img {
+                    width: 220px;
+                    height: 220px;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
