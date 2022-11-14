@@ -21,9 +21,7 @@ const Youtube = () => {
     //         .catch((error) => console.log(error));
     // };
     useEffect(() => {
-        fetch(
-            "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=webstoryboy&key=AIzaSyCBk8G_DrF1XOmXvzm9-VoJDLeNgBpmJII&maxResults=20&type=video"
-        )
+        fetch("https://jeonboyeon.github.io/react_api/src/util/youtube.json")
             .then((response) => response.json())
             // .then((result) => console.log(result))
             .then((result) => setYoutubes(result.items))

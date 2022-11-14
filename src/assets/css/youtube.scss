@@ -1,0 +1,28 @@
+.cont__youtube {
+    .youtube__inner {
+        ul {
+            column-count: 4;
+            column-gap: 20px;
+            width: 100%;
+
+            li {
+                margin-bottom: 20px;
+                a {
+                    img {
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                    }
+                    em {
+                        font-family: var(--font-kr);
+                        .youtube_title {
+                            color: var(--white);
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
